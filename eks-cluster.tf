@@ -77,7 +77,7 @@ module "eks" {
         Name = "ondemand-node-group.eks-${var.project}-${var.environment}"
       },
       additional_tags = {
-        NodeType = "ondemand"
+        NodeName = "ondemand"
         InstanceType = "ondemand"
         Name = "ondemand-node-group.eks-${var.project}-${var.environment}"
       }
