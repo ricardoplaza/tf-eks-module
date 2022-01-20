@@ -3,7 +3,7 @@
 resource "kubernetes_role" "eks-developers-role" {
   metadata {
     name = "eks-dev-role"
-    namespace = "stylesage"
+    namespace = "ricardoplaza"
   }
 
   rule {
@@ -18,7 +18,7 @@ resource "kubernetes_role" "eks-developers-role" {
 resource "kubernetes_role_binding" "eks-developers-role-binding" {
   metadata {
     name      = "eks-developers-role-binding"
-    namespace = "stylesage"
+    namespace = "ricardoplaza"
   }
   role_ref {
     api_group = "rbac.authorization.k8s.io"

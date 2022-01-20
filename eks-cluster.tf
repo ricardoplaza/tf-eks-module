@@ -1,5 +1,5 @@
-resource "aws_kms_key" "kms-eks-stylesage" {
-  description = "EKS Secret Encryption Key for stylesage"
+resource "aws_kms_key" "kms-eks-ricardoplaza" {
+  description = "EKS Secret Encryption Key for ricardoplaza"
 }
 
 module "eks" {
@@ -19,7 +19,7 @@ module "eks" {
 
   cluster_encryption_config = [
     {
-      provider_key_arn = aws_kms_key.kms-eks-stylesage.arn
+      provider_key_arn = aws_kms_key.kms-eks-ricardoplaza.arn
       resources        = ["secrets"]
     }
   ]
